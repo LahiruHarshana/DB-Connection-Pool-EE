@@ -6,7 +6,7 @@
               auth="Container"
               type="javax.sql.DataSource"
               maxTotal="5"
-              maxIdle="30"
+              maxIdle="2"
               maxWaitMillis="-1"
               username="javauser"
               password="javadude"
