@@ -11,5 +11,5 @@
               username="root"
               password="12345678"
               driverClassName="com.mysql.cj.jdbc.Driver"
-              url="jdbc:mysql://localhost:3306/javatest"/>
+              url="jdbc:mysql://localhost:3306/TestThogaKade"/>
 </Context>
