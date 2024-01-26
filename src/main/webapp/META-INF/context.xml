@@ -2,7 +2,7 @@
 <Context path="/">
 
 
-    <Resource name="jdbc/TestDB"
+    <Resource name="jdbc/pos"
               auth="Container"
               type="javax.sql.DataSource"
               maxTotal="100"
