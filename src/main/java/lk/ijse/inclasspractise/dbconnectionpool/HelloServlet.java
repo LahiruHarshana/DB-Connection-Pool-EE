@@ -18,33 +18,17 @@ public class HelloServlet extends HttpServlet {
     public void init() {
         message = "Hello World!";
     }
-
     public void doGet(HttpServletRequest request, HttpServletResponse response) throws IOException {
-        Context initContext = null;
         try {
-            initContext = new InitialContext();
-        } catch (NamingException e) {
-            throw new RuntimeException(e);
-        }
-        Context envContext  = null;
-        try {
-            envContext = (Context)initContext.lookup("java:/comp/env");
-        } catch (NamingException e) {
-            throw new RuntimeException(e);
-        }
-        DataSource ds = null;
-        try {
-            ds = (DataSource)envContext.lookup("jdbc/myoracle");
-        } catch (NamingException e) {
-            throw new RuntimeException(e);
-        }
-        try {
+            Context initContext = new InitialContext();
+            Context envContext = (Context) initContext.lookup("java:/comp/env");
+            DataSource ds = (DataSource) envContext.lookup("jdbc/myoracle");
             Connection conn = ds.getConnection();
-        } catch (SQLException e) {
+        } catch (NamingException | SQLException e) {
             throw new RuntimeException(e);
         }
-
     }
+
 
     public void destroy() {
     }
