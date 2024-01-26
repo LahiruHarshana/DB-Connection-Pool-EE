@@ -21,12 +21,13 @@ public class HelloServlet extends HttpServlet {
     public void doGet(HttpServletRequest request, HttpServletResponse response) throws IOException {
         try {
             Context initContext = new InitialContext();
-            Context pool = (Context) initContext.lookup("java:/comp/env/jdbc/pos");
+            DataSource pool = (DataSource) initContext.lookup("java:/comp/env/jdbc/pos");
 
+            Connection conn = pool.getConnection();
 
 //            DataSource ds = (DataSource) envContext.lookup("jdbc/myoracle");
 //            Connection conn = ds.getConnection();
-        } catch (NamingException e) {
+        } catch (NamingException | SQLException e) {
             throw new RuntimeException(e);
         }
     }
