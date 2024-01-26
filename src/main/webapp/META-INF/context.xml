@@ -8,7 +8,7 @@
               maxTotal="5"
               maxIdle="2"
               maxWaitMillis="-1"
-              username="javauser"
+              username="root"
               password="javadude"
               driverClassName="com.mysql.jdbc.Driver"
               url="jdbc:mysql://localhost:3306/javatest"/>
