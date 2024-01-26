@@ -9,7 +9,7 @@
               maxIdle="2"
               maxWaitMillis="-1"
               username="root"
-              password="javadude"
+              password="12345678"
               driverClassName="com.mysql.jdbc.Driver"
               url="jdbc:mysql://localhost:3306/javatest"/>
 </Context>
