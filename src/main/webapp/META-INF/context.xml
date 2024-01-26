@@ -10,6 +10,6 @@
               maxWaitMillis="-1"
               username="root"
               password="12345678"
-              driverClassName="com.mysql.jdbc.Driver"
+              driverClassName="com.mysql.cj.jdbc.Driver"
               url="jdbc:mysql://localhost:3306/javatest"/>
 </Context>
