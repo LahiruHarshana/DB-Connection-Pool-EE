@@ -24,9 +24,6 @@ public class HelloServlet extends HttpServlet {
             DataSource pool = (DataSource) initContext.lookup("java:/comp/env/jdbc/pos");
 
             Connection conn = pool.getConnection();
-
-//            DataSource ds = (DataSource) envContext.lookup("jdbc/myoracle");
-//            Connection conn = ds.getConnection();
         } catch (NamingException | SQLException e) {
             throw new RuntimeException(e);
         }
