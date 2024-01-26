@@ -20,6 +20,7 @@ public class HelloServlet extends HttpServlet {
     }
     public void doGet(HttpServletRequest request, HttpServletResponse response) throws IOException {
         try {
+
             Context initContext = new InitialContext();
             DataSource pool = (DataSource) initContext.lookup("java:/comp/env/jdbc/pos");
             Connection conn = pool.getConnection();
