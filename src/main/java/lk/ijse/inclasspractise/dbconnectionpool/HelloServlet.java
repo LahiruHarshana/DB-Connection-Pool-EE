@@ -22,7 +22,6 @@ public class HelloServlet extends HttpServlet {
         try {
             Context initContext = new InitialContext();
             DataSource pool = (DataSource) initContext.lookup("java:/comp/env/jdbc/pos");
-
             Connection conn = pool.getConnection();
 
             System.out.println(conn);
