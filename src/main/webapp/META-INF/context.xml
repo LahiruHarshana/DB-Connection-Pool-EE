@@ -5,7 +5,7 @@
     <Resource name="jdbc/pos"
               auth="Container"
               type="javax.sql.DataSource"
-              maxTotal="100"
+              maxTotal="5"
               maxIdle="30"
               maxWaitMillis="-1"
               username="javauser"
